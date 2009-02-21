@@ -1,0 +1,16 @@
+%form{:action => :show, :method => :post}
+  Me: 
+  %input{:name => :me}
+  %br
+  My Password:
+  %input{:name => :password, :type => :password} 
+  %br
+  %small 
+    Hey look at that, someone's asking for my twitter password!
+    %br Sorry, until Twitter opens up it's OAuth to everyone, this is the only way I can get your followers.
+  %p
+  Does
+  %input{:name => :tweeple}
+  follow me?
+  %br
+  %input{:type => :submit}
