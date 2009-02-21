@@ -2,13 +2,18 @@ require 'rubygems'
 require 'sinatra'
 require 'twitter'
 
+get '/stylesheets/stylesheet.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :"stylesheets/stylesheet"
+end
+
 get '/' do
   haml :index
 end
 
 post '/show' do
   if params[:me].blank? || params[:password].blank?
-    halt haml :no_credentials
+    halt haml(:no_credentials)
   end
 
   user = Twitter::Base.new(params[:me], params[:password])

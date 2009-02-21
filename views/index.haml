@@ -1,4 +1,5 @@
 %form{:action => :show, :method => :post}
+  %h3 Want to find out if someone follows you on Twitter?
   Me: 
   %input{:name => :me}
   %br
@@ -7,10 +8,10 @@
   %br
   %small 
     Hey look at that, someone's asking for my twitter password!
-    %br Sorry, until Twitter opens up it's OAuth to everyone, this is the only way I can get your followers.
+    %br Sorry, until Twitter opens up its OAuth to everyone, this is the only way I can get your followers.
   %p
   Does
   %input{:name => :tweeple}
   follow me?
   %br
-  %input{:type => :submit}
+  %input{:type => :submit, :value => 'Tweeple it!'}

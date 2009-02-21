@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    :javascript
+      try {
+        var pageTracker = _gat._getTracker("UA-7589384-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    %meta{:name => "directions", :content => "Found out if someone follows you on twitter"}
+    %meta{:name=>"keywords", :content=> "twitter, friends, followers, tweeple, tweet"}
+    %link{:href=>"/stylesheets/stylesheet.css", :media=>"all", :rel=>"stylesheet", :type=>"text/css"}/
+    %title Does X Follow me on Twitter?
+  %body
+    :javascript
+      <!--
+      google_ad_client = "pub-5494098306190004";
+      google_ad_slot = "8118923195";
+      google_ad_width = 728;
+      google_ad_height = 90;
+      //-->
+    %script{:src => "http://pagead2.googlesyndication.com/pagead/show_ads.js"}
+    %p
+    =yield
